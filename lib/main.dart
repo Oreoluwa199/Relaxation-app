@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peppermintapp/page/nextpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,13 @@ class MyApp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Navigate to the next page on Apple button press
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const NextPage()),
+                    );
+                  },
                   icon:
                       const Icon(Icons.apple), // Replace with your desired icon
                   label: const Text(
